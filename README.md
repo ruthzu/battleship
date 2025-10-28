@@ -1,131 +1,84 @@
-# Battleship
+Here’s your **Battleship README** written in the same clean and professional style as the *Knight Travails* one:
 
-Classic Battleship built with vanilla JavaScript, HTML, and CSS. It features a smart AI, crisp turn-by-turn gameplay, clean visuals, sound effects (hit/miss/sink), and an ambient underwater loop you can toggle on/off.
+---
 
-## Features
+# 🛳️ Battleship Game
 
-- Smart computer opponent that remembers hits and targets adjacent squares; extends along a line after multiple hits.
-- Strict 1-to-1 turn alternation: each side makes exactly one move per turn.
-- Manual ship placement with drag-and-drop, or one-click Randomize.
-- Start button is enabled only after all Player One ships are placed.
-- Clear feedback: centered hit/miss markers, subtle wave animation on hits, and an explosion animation on sinks.
-- Remaining-ships counters and a crown indicator for the winner.
-- Turn indicator to show whose move it is.
-- Sound effects: hit, miss, and sink. Ambient underwater loop during gameplay.
-- Sound button to toggle audio on/off (affects ambient; event sounds respect the toggle).
-- Reset and Quit controls: restart the match or return to the placement screen.
-- Polished UI with button icons and a footer credit ("Made by Ruth").
+## 🚀 Live Demo
 
-## Quick start
+Play it online:
+[https://ruthzu.github.io/battleship](https://ruthzu.github.io/battleship)
 
-Prerequisites:
+![Project Screenshot](/battleship/src/assets/images/screen-record.png)
 
-- Node.js 18+ recommended
+---
 
-Install dependencies:
+A classic **Battleship game** built with **JavaScript**, **HTML**, and **CSS**, featuring dynamic board rendering, hit detection, and turn-based gameplay between the player and computer.
 
-```bash
-npm install
-```
+Sink all enemy ships before yours go down!
 
-Run the development server (with hot reload):
+---
 
-```bash
-npm run dev
-```
+## 🎮 Game Overview
 
-Build a production bundle to `dist/`:
+**Battleship** is a two-player strategy game where each player hides ships on a grid and takes turns firing shots to locate and destroy the opponent’s fleet.
 
-```bash
-npm run build
-```
+### 🧩 Core Features
 
-Optional: Deploy to GitHub Pages (requires your repo to be configured):
+* **Ship Placement System:**
+  Dynamically places ships of various lengths on the grid, ensuring no overlap.
+* **Attack & Hit Detection:**
+  Handles user and AI attacks, marking hits and misses visually.
+* **Game Logic Control:**
+  Manages player turns, win conditions, and board updates in real time.
+* **Interactive UI:**
+  Hover effects and animations for placing and attacking ships.
+* **Modular Codebase:**
+  Organized with pure functions for ship, board, and player logic.
 
-```bash
-# Build first
-npm run build
-# Then publish dist/ to gh-pages
-npm run deploy
-```
+---
 
-## How to play
+## ⚙️ How the Game Works
 
-1. Place your ships on the Player One grid by dragging and dropping them into valid positions, or click Randomize.
-2. Click Start when all ships are placed. The AI will place its ships automatically.
-3. Attack by clicking a square on the opponent’s grid.
-4. Turns alternate strictly: you take one shot, then the AI takes one shot.
-5. The AI remembers successful hits and aims nearby; after multiple adjacent hits, it extends along the line to finish ships.
-6. Sink all opposing ships to win. A crown will mark the winner.
-7. Use Reset to restart a match, or Quit to return to ship placement.
-8. Toggle Sound to enable/disable audio. Ambient starts during gameplay and stops on reset/quit.
+1. **Gameboard Initialization**
+   Each player has a 10×10 grid represented as a two-dimensional array.
+2. **Ship Placement**
 
-Note: Some browsers restrict autoplay of audio. Because the game starts after user interaction, ambient should play; if it doesn’t, click Sound to toggle.
+   * Ships are created from a **Ship Factory** function with properties like length and hit count.
+   * Ships are placed on valid coordinates with horizontal or vertical orientation.
+3. **Attacks**
 
-## Project structure
+   * The player selects a square on the enemy board.
+   * The board checks if a ship occupies that position and updates the state to **hit** or **miss**.
+4. **Computer Moves**
 
-```
-package.json
-README.md
-webpack.common.js
-webpack.dev.js
-webpack.prod.js
-src/
-	index.html
-	index.js
-	style.css
-	assets/
-		audio/
-		fonts/
-		images/
-		styles/
-			global.css
-			reset.css
-	modules/
-		dom.js
-		Game.js
-		gameboard.js
-		grid.js
-		players.js
-		ship.js
-```
+   * The computer makes random (or strategic) attacks on untried coordinates.
+5. **Win Condition**
 
-Key modules:
+   * When all ships in one fleet are sunk, the game ends and the winner is announced.
 
-- `modules/dom.js`: Builds the UI, wires events, renders attack results and animations, manages turn flow and audio, and attaches controls.
-- `modules/players.js`: Player models and AI targeting logic (queueing adjacent targets and extending along a line).
-- `modules/gameboard.js`: Ship placement, attack resolution (hit/miss/sunk), and win detection.
-- `modules/ship.js`: Ship state and hit tracking.
-- `modules/grid.js`: Grid helpers and DOM interactions for placement/attacks.
-- `index.js`: App bootstrap and wiring.
+---
 
-## Tech stack
+## 🧠 Game Architecture
 
-- JavaScript (ES modules), HTML, CSS
-- Webpack 5 and webpack-dev-server
-- PostCSS + Autoprefixer
+| Module                | Responsibility                                            |
+| --------------------- | --------------------------------------------------------- |
+| **Ship.js**           | Creates ship objects, tracks hits, and checks if sunk.    |
+| **Gameboard.js**      | Manages ship placement, attacks, and hit detection.       |
+| **Player.js**         | Handles player and computer turns.                        |
+| **index.js / DOM.js** | Manages UI updates, board rendering, and event listeners. |
 
-### NPM scripts
+---
 
-- `npm run dev` — start the dev server with hot reload
-- `npm run build` — produce a production build in `dist/`
-- `npm run deploy` — publish `dist/` to GitHub Pages (requires repo setup)
+## 🛠️ Built With
 
-## Development notes
+* **JavaScript (ES6+)**
+* **HTML5 / CSS3**
+* **Webpack** (module bundling)
+* **PostCSS + Autoprefixer** (for cross-browser styling)
 
-- Audio: Event sounds (hit/miss/sink) and an ambient underwater loop are bundled. Large audio files can trigger webpack performance warnings; this is expected and safe.
-- Autoplay: If the ambient loop doesn’t start due to a browser policy, use the Sound button to toggle. Most interactions will count as user gestures and allow playback.
-- Comments: Source files keep a single module header at the top and avoid inline/block comments to stay clean and readable.
+---
 
-## Known issues / tips
+## 📚 Acknowledgments
 
-- If assets don’t appear during development, ensure your dev server is running and you’re visiting the correct localhost port printed by the terminal.
-- If audio is too loud or quiet, adjust your system volume or replace the audio files in `src/assets/audio/` with alternatives of your choice.
-
-## Contributing
-
-Suggestions and bug reports are welcome. Feel free to open an issue or submit a pull request.
-
-## License
-
-Add a license of your choice (e.g., MIT) to clarify usage and contributions.
+Inspired by the **Battleship Project** from [The Odin Project](https://www.theodinproject.com
