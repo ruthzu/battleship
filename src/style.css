@@ -62,76 +62,35 @@ h6 {
 #__next {
   isolation: isolate;
 }
-
-/* :root {
-  --background-color: #0e1a23;
-  --primary-color: #3ef3fa;
-  --stroke-color: #60dce0;
-  --dot-color: hsl(182, 95%, 30%);
-  --hover-color: rgba(62, 244, 250, 0.25);
-  --stats-stroke-color: rgba(96, 220, 224, 0.5);
-  --empty-mark-color: #094c4f;
-  --winning-color: #ffcc00;
-  --player1-ship-shadow: 0 0 8px rgba(0, 255, 98, 0.8);
-  --player1-ship-stroke: #60e091;
-  --player2-ship-shadow: 0 0 8px rgba(255, 136, 0, 0.8);
-  --player2-ship-stroke: #e0a560;
-  --hit-mark-shadow: 0 0 8px rgba(255, 0, 55, 0.8);
-  --hit-mark-stroke: #e0607c;
-  --miss-mark-shadow: 0 0 8px rgba(47, 166, 170, 0.8);
-  --miss-mark-stroke: #60dce0;
-  --green: #44ea83;
-  --red: #f90538;
-  --orange: #f7890c;
-  --box-height: 35px;
-  --box-width: 35px;
-  --dot-size:1.5px;
-} */
-
 :root {
-  /* Ultra-Premium Pastel Core */
-  --background-color: #1e1b2e;           /* Midnight lavender sky */
-  --primary-color: #ffd1e3;              /* Marshmallow pink */
-  --stroke-color: #ffc1e0;               /* Creamy strawberry rim */
-  --dot-color: #ff99c8;                  /* Cotton candy center */
-  --hover-color: rgba(255, 209, 227, 0.35); /* Fluffy hover puff */
-  --stats-stroke-color: rgba(255, 193, 224, 0.45);
-
-  /* Grid & Victory */
-  --empty-mark-color: #2d2a42;           /* Soft void depth */
-  --winning-color: #fff8b3;              /* Buttercream gold star */
-
-  /* Player Ships — Adorable Rivals */
-  --player1-ship-shadow: 0 0 14px rgba(255, 180, 220, 0.95);
-  --player1-ship-stroke: #ffb3d9;         /* P1: "Sakura Puff" */
-  
-  --player2-ship-shadow: 0 0 14px rgba(200, 230, 255, 0.95);
-  --player2-ship-stroke: #c1e8ff;         /* P2: "Cloud Nine" */
-
-  /* Hit & Miss — Magical Feedback */
-  --hit-mark-shadow: 0 0 16px rgba(255, 120, 180, 1);
-  --hit-mark-stroke: #ff85c0;            /* Pop! Strawberry burst */
-  
-  --miss-mark-shadow: 0 0 10px rgba(180, 230, 255, 0.9);
-  --miss-mark-stroke: #b3e5ff;           /* Gentle ripple */
-
-  /* Status Sprinkles */
-  --green: #d1f7c4;                      /* Mint frosting */
-  --red: #ffa8d1;                        /* Rosy alert */
-  --orange: #ffd7a8;                     /* Peach macaron */
-
-  /* Layout — Plush & Playful */
-  --box-height: 40px;
-  --box-width: 40px;
-  --dot-size: 3px;                       /* Chonky sprinkle dots */
-
-  /* PREMIUM: Ultra-Cute Polish */
-  --grid-glow: 0 0 8px rgba(255, 209, 227, 0.25);
-  --panel-bg: rgba(30, 27, 46, 0.75);
-  --text-glow: 0 0 10px rgba(255, 209, 227, 0.6);
-  --border-radius: 16px;                 /* Max roundness */
-  --transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1); /* Boing! */
-  --sparkle: radial-gradient(circle at 30% 30%, #fff, transparent 60%);
+  --background-color: #0f0b1a;
+  --primary-color: #ffd700;
+  --stroke-color: #ffed4e;
+  --dot-color: #b8860b;
+  --hover-color: rgba(255, 215, 0, 0.25);
+  --stats-stroke-color: rgba(255, 237, 78, 0.4);
+  --empty-mark-color: #1c1626;
+  --winning-color: #fff700;
+  --player1-ship-shadow: 0 0 16px rgba(255, 223, 0, 1);
+  --player1-ship-stroke: #ffdf00;
+  --player2-ship-shadow: 0 0 16px rgba(255, 215, 0, 0.9);
+  --player2-ship-stroke: #ffcd00;
+  --hit-mark-shadow: 0 0 18px rgba(255, 69, 0, 1);
+  --hit-mark-stroke: #ff4500;
+  --miss-mark-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
+  --miss-mark-stroke: #ffed4e;
+  --green: #d4ed31;
+  --red: #ff2d55;
+  --orange: #ff8c00;
+  --box-height: 42px;
+  --box-width: 42px;
+  --dot-size: 3.5px;
+  --grid-glow: 0 0 10px rgba(255, 215, 0, 0.3);
+  --panel-bg: rgba(15, 11, 26, 0.8);
+  --text-glow: 0 0 12px rgba(255, 215, 0, 0.7);
+  --border-radius: 14px;
+  --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --sparkle: radial-gradient(circle at 40% 40%, #fff, transparent 70%);
 }
 
 @font-face {
@@ -495,5 +454,12 @@ gap: 20px;
 .app-footer svg{
   width: 18px;
   height: 18px;
+  color: inherit;
+}
+.icon{
+  padding-bottom: 12px;
+  padding-right:3px ;
+  height: 50px;
+  width: 50px;
   color: inherit;
 }
