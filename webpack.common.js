@@ -4,15 +4,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'bundle.js', 
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    publicPath: './',
+    publicPath: '/', // important for dev server
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      favicon: './src/assets/images/ship.png', 
+      favicon: './src/assets/images/ship.png',
     }),
   ],
   module: {
@@ -22,7 +22,7 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg|ico|mp3|wav|ogg)$/i,
+        test: /\.(png|jpe?g|gif|svg|ico|mp3|wav|ogg)$/i,
         type: 'asset/resource',
       },
       {
