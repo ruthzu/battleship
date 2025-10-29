@@ -1,7 +1,3 @@
-Got it! Here’s the updated **README** with your correct screenshot path and the same clean, resume-ready format 👇
-
----
-
 # 🛳️ Battleship Game
 
 ## 🚀 Live Demo
