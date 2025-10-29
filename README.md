@@ -1,4 +1,4 @@
-Here’s your **Battleship README** written in the same clean and professional style as the *Knight Travails* one:
+Got it! Here’s the updated **README** with your correct screenshot path and the same clean, resume-ready format 👇
 
 ---
 
@@ -9,7 +9,7 @@ Here’s your **Battleship README** written in the same clean and professional s
 Play it online:
 [https://ruthzu.github.io/battleship](https://ruthzu.github.io/battleship)
 
-![Project Screenshot](/battleship/src/assets/images/screen-record.png)
+![Project Screenshot](src/assets/images/screen-record.png)
 
 ---
 
@@ -25,15 +25,15 @@ Sink all enemy ships before yours go down!
 
 ### 🧩 Core Features
 
-* **Ship Placement System:**
+- **Ship Placement System:**
   Dynamically places ships of various lengths on the grid, ensuring no overlap.
-* **Attack & Hit Detection:**
+- **Attack & Hit Detection:**
   Handles user and AI attacks, marking hits and misses visually.
-* **Game Logic Control:**
+- **Game Logic Control:**
   Manages player turns, win conditions, and board updates in real time.
-* **Interactive UI:**
+- **Interactive UI:**
   Hover effects and animations for placing and attacking ships.
-* **Modular Codebase:**
+- **Modular Codebase:**
   Organized with pure functions for ship, board, and player logic.
 
 ---
@@ -44,18 +44,21 @@ Sink all enemy ships before yours go down!
    Each player has a 10×10 grid represented as a two-dimensional array.
 2. **Ship Placement**
 
-   * Ships are created from a **Ship Factory** function with properties like length and hit count.
-   * Ships are placed on valid coordinates with horizontal or vertical orientation.
+   - Ships are created from a **Ship Factory** function with properties like length and hit count.
+   - Ships are placed on valid coordinates with horizontal or vertical orientation.
+
 3. **Attacks**
 
-   * The player selects a square on the enemy board.
-   * The board checks if a ship occupies that position and updates the state to **hit** or **miss**.
+   - The player selects a square on the enemy board.
+   - The board checks if a ship occupies that position and updates the state to **hit** or **miss**.
+
 4. **Computer Moves**
 
-   * The computer makes random (or strategic) attacks on untried coordinates.
+   - The computer makes random (or strategic) attacks on untried coordinates.
+
 5. **Win Condition**
 
-   * When all ships in one fleet are sunk, the game ends and the winner is announced.
+   - When all ships in one fleet are sunk, the game ends and the winner is announced.
 
 ---
 
@@ -72,13 +75,9 @@ Sink all enemy ships before yours go down!
 
 ## 🛠️ Built With
 
-* **JavaScript (ES6+)**
-* **HTML5 / CSS3**
-* **Webpack** (module bundling)
-* **PostCSS + Autoprefixer** (for cross-browser styling)
+- **JavaScript (ES6+)**
+- **HTML5 / CSS3**
+- **Webpack** (for bundling and dev server)
+- **PostCSS + Autoprefixer** (for cross-browser styling)
 
 ---
-
-## 📚 Acknowledgments
-
-Inspired by the **Battleship Project** from [The Odin Project](https://www.theodinproject.com
