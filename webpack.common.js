@@ -4,14 +4,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.js', 
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    publicPath: './',
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      icon: './src/assets/images/ship.png',
+      favicon: './src/assets/images/ship.png', 
     }),
   ],
   module: {
@@ -21,7 +22,7 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg|ico|mp3|wav|ogg)$/i, // include audio & icons
+        test: /\.(png|jpg|jpeg|gif|svg|ico|mp3|wav|ogg)$/i,
         type: 'asset/resource',
       },
       {
@@ -29,8 +30,5 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
-  },
-  optimization: {
-    sideEffects: true,
   },
 };
