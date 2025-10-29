@@ -1,9 +1,7 @@
 # 🛳️ Battleship Game
 
-## 🚀 Live Demo
-
-Play it online:
-[https://ruthzu.github.io/battleship](https://ruthzu.github.io/battleship)
+## Live Demo
+[Play the game](https://ruthzu.github.io/battleship)
 
 ![Project Screenshot](src/assets/images/screen-record.png)
 
